@@ -1,0 +1,133 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins','sans-serif';
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    display: grid;
+    place-items: center;
+}
+
+#head{
+    position: absolute;
+    top: 1%;
+    user-select: none;
+    color: white;
+}
+
+.game-info{
+    color: white;
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 0.5rem 3rem;
+}
+
+.tic-tac-toe{
+    width: 90%;
+    max-width: 20rem;
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    aspect-ratio: 1/1;
+}
+
+.box{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    font-size: 3rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1,.box2,.box4,.box5{
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.box3,.box6{
+    border-bottom: 2px solid white;
+}
+
+.box7,.box8{
+    border-right: 2px solid white;
+}
+
+.btn{
+    color: white;
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255,255,255,0.25);
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+    display: none;
+}
+
+.footer{
+    bottom: 2%;
+    color: white;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn.active{
+    display: flex;
+}
+
+.win{
+    background-color: rgba(0,255,0,0.8);
+}
+
+@media  (max-width:480px) {
+    .wrapper{
+        width: 100%;
+    }
+
+    .game-info{
+        font-size: 10px;
+        padding: 0.5rem 2rem;
+        top: 3rem;
+    }
+    #head{
+        font-size: 25px;
+        top: 1%;
+    }
+
+    .btn{
+        font-size: 10px;
+        padding: 0.5rem 2rem;
+    }
+
+    .box{
+        width: 100%;
+        font-size: 1.8rem;
+    }
+
+    .footer{
+        bottom: 1%;
+        font-size: 12px;
+    }
+}
